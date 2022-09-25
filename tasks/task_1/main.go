@@ -16,7 +16,7 @@ func (l *List[T]) Update(i int, t T) {
 
 func (l *List[T]) Pop() T {
 	last := l.elems[len(l.elems)-1]
-	l.elems = l.elems[:len(l.elems)]
+	l.elems = l.elems[:len(l.elems)-1]
 	return last
 }
 
