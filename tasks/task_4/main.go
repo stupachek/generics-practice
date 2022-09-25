@@ -32,6 +32,22 @@ func ToStringsB(s []B) []string {
 	return r
 }
 
+func ToStrings[F []fmt.Stringer](f F) []string {
+	r := make([]string, len(f))
+	for i, v := range f {
+		r[i] = v.String()
+	}
+	return r
+}
+
+func ToStringsI(f []fmt.Stringer) []string {
+	r := make([]string, len(f))
+	for i, v := range f {
+		r[i] = v.String()
+	}
+	return r
+}
+
 // Task: implement again functions ToStrings, ToStringsI for fmt.Stringers
 func main() {
 	arrA := []A{{}, {}}
